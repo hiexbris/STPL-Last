@@ -50,9 +50,11 @@ const Hero = () => {
                 Explore Our Technology
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg">
-                Download Brochure
-              </Button>
+              <a href="/STPL_Brochure.pdf" download>
+                <Button variant="outline" size="lg" className="text-lg">
+                  Download Brochure
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

@@ -100,9 +100,11 @@ const Contact = () => {
                   Schedule a Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="w-full text-lg">
-                  Download Technical Brochure
-                </Button>
+                <a href="/STPL_Brochure.pdf" download style={{ width: '100%', display: 'block' }}>
+                  <Button variant="outline" size="lg" className="w-full text-lg">
+                    Download Technical Brochure
+                  </Button>
+                </a>
               </div>
 
               {/* Key Benefits */}
