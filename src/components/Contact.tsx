@@ -1,8 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Globe, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ArrowRight, Linkedin } from "lucide-react";
 
 const Contact = () => {
+  const contactOptions = [
+    {
+      icon: Mail,
+      title: "Email",
+      description: "sabujtech100@gmail.com",
+      link: "mailto:sabujtech100@gmail.com"
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      description: "sabuj-tech-private-limited",
+      link: "https://www.linkedin.com/company/sabuj-tech-private-limited"
+    },
+    {
+      icon: MapPin,
+      title: "Research Center",
+      description: "IIT Kharagpur, West Bengal, India",
+      link: "https://maps.app.goo.gl/Mi3mMahLAVLLXQuz8"
+    }
+  ];
+
   return (
     <section className="section-padding bg-card">
       <div className="max-w-7xl mx-auto">
@@ -27,41 +48,30 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Connect With Us</h3>
               <div className="space-y-4">
-                <Card className="border-primary/20">
-                  <CardContent className="p-4 flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Email</div>
-                      <div style={{ color: '#647a88' }}>sabujtech100@gmail.com</div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-primary/20">
-                  <CardContent className="p-4 flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Globe className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Website</div>
-                      <div style={{ color: '#647a88' }}>www.novogreentech.com</div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-primary/20">
-                  <CardContent className="p-4 flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Research Center</div>
-                      <div style={{ color: '#647a88' }}>IIT Kharagpur, West Bengal, India</div>
-                    </div>
-                  </CardContent>
-                </Card>
+                {contactOptions.map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block transition-transform hover:scale-105"
+                  >
+                    <Card className="border-primary/20 cursor-pointer hover:shadow-lg transition-shadow hover:border-primary/40">
+                      <CardContent className="p-4 flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                          <contact.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-medium">{contact.title}</div>
+                          <div style={{ color: '#647a88' }}>{contact.description}</div>
+                        </div>
+                        <div className="opacity-50 group-hover:opacity-100 transition-opacity">
+                          <ArrowRight className="w-4 h-4 text-primary" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </a>
+                ))}
               </div>
             </div>
 

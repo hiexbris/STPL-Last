@@ -5,28 +5,36 @@ import { Users, GraduationCap } from "lucide-react";
 const Team = () => {
   const teamMembers = [
     {
+      name: "Dr. Prakash Ajay Taksal",
+      role: "Chief Executive Officer",
+      expertise: "Research and Product Development Venture | Technology Transfer | Intellectual Property Portfolio Management",
+      background: "Environmental Science and Engineering",
+      image: "/PAT.png",
+      linkedin: "wwe.linkedin.com"
+    },
+    {
       name: "Dr. Jayanta Bhattacharya",
-      role: "Co-Founder",
-      expertise: "Materials Science & Green Chemistry",
-      background: "IIT Kharagpur"
+      role: "Managing Director",
+      expertise: "Green Materials | Industrial Ecology",
+      background: "Ex-Professor, Department Mining Engineering and School of Environmental Science & Engineering, IIT Kharagpur",
+      image: "/JB.png",
+      linkedin: "wwe.linkedin.com"
     },
     {
       name: "Dr. Bidus Kanti Das",
-      role: "Co-Founder",
-      expertise: "Agricultural Engineering & Sustainability",
-      background: "Research Excellence"
-    },
-    {
-      name: "Dr. Prakash Ajay Taksal",
-      role: "Chief Executive Officer",
-      expertise: "Technology Commercialization",
-      background: "Industry Leadership"
+      role: "Business Advisor",
+      expertise: "Industrial Manufacturing | Marketing Strategist",
+      background: "Sustainable Technology Development",
+      image: "/BKD.png",
+      linkedin: "wwe.linkedin.com"
     },
     {
       name: "Dr. Chandra Sekhar Tiwari",
-      role: "Advisor",
-      expertise: "Strategic Development & Innovation",
-      background: "Advisory Excellence"
+      role: "Technical Advisor",
+      expertise: "Advanced Materials | Strategic Development & Innovation",
+      background: "Assistant Professor Grade I, Department of Metallurgical & Materials Engineering, IIT Kharagpur",
+      image: "/CST.png",
+      linkedin: "wwe.linkedin.com"
     }
   ];
 
@@ -71,48 +79,50 @@ const Team = () => {
         {/* Team Members */}
         <div className="grid md:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="card-hover border-primary/20">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  {/* Avatar Image */}
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden bg-primary/10">
-                    <img
-                      src={
-                        index === 0 ? '/JB.png'
-                        : index === 1 ? '/BKD.png'
-                        : index === 2 ? '/PAT.png'
-                        : index === 3 ? '/CST.png'
-                        : '/placeholder.svg'
-                      }
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="text-xl font-bold">{member.name}</h3>
-                        <Badge variant="secondary" className="mt-1">
-                          {member.role}
-                        </Badge>
+            <a
+              key={index}
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block transition-transform hover:scale-105"
+            >
+                <Card className="card-hover border-primary/20 cursor-pointer hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      {/* Avatar Image */}
+                      <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden bg-primary/10">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-3">
+                          <div>
+                            <h3 className="text-xl font-bold">{member.name}</h3>
+                            <Badge variant="secondary" className="mt-1">
+                              {member.role}
+                            </Badge>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div>
+                            <span className="text-sm font-medium text-primary">Expertise:</span>
+                            <p className="text-sm text-muted-foreground">{member.expertise}</p>
+                          </div>
+                          <div>
+                            <span className="text-sm font-medium text-primary">Background:</span>
+                            <p className="text-sm text-muted-foreground">{member.background}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    
-                    <div className="space-y-2">
-                      <div>
-                        <span className="text-sm font-medium text-primary">Expertise:</span>
-                        <p className="text-sm text-muted-foreground">{member.expertise}</p>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-primary">Background:</span>
-                        <p className="text-sm text-muted-foreground">{member.background}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              </a>
           ))}
         </div>
 

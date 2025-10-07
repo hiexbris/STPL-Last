@@ -1,4 +1,4 @@
-import { Leaf, Mail, Globe, MapPin } from "lucide-react";
+import {Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -21,8 +21,8 @@ const Footer = () => {
                 <span>sabujtech100@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4" />
-                <span>www.novogreentech.com</span>
+                <Linkedin className="w-4 h-4" />
+                <span>www.linkedin.com/company/sabuj-tech-private-limited</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
