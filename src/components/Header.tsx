@@ -12,7 +12,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center space-x-2">
             <img src="/logo.png" alt="Sabuj Tech Logo" className="w-8 h-8" />
-            <h1 className="text-2xl font-bold hero-text">Sabuj Tech</h1>
+            <h1 className="text-2xl font-bold" style={{ color: '#07602b' }}>Sabuj Tech</h1>
           </div>
 
           {/* Desktop Navigation */}

@@ -20,7 +20,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Research Center",
       description: "IIT Kharagpur, West Bengal, India",
-      link: "https://maps.app.goo.gl/Mi3mMahLAVLLXQuz8"
+      link: "https://maps.app.goo.gl/U8wJyniXGZ2jF6UVA"
     }
   ];
 
