@@ -2,18 +2,17 @@ import {Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-  <footer className="bg-primary text-white">
+  <footer className="text-white" style={{ backgroundColor: '#07602b' }}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo.png" alt="Sabuj Tech Logo" className="w-8 h-8" />
+              <img src="/image.png" alt="Sabuj Tech Logo" className="w-8 h-8" />
               <h3 className="text-2xl font-bold">Sabuj Tech</h3>
             </div>
             <p className="text-white mb-6 max-w-md">
-              Leading the transformation of agricultural waste into high-impact carbon innovations 
-              for a sustainable, climate-positive future.
+              Together for change.
             </p>
             <div className="space-y-2 text-sm text-white">
               <div className="flex items-center space-x-2">
